@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                // You can add your build commands here
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                // You can add your test commands here
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline completed.'
+        }
+    }
+}
